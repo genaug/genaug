@@ -4,7 +4,7 @@
 [Zoey Chen](https://qiuyuchen14.github.io//), [Sho Kiami](https://www.linkedin.com/in/shokiami), [Abhishek Gupta*](https://abhishekunique.github.io/) [Vikash Kumar*](https://vikashplus.github.io/)  
 [RSS 2023](https://roboticsconference.org/) 
 
-GenAug is a data augmentation tool to boostracp diverse RGBD images for robotics data collection, using text-to-image generative models.
+GenAug is a data augmentation tool that leverate text-to-image generative models and generate diverse RGBD images for robotics data collection. 
 For the latest updates, see: [genaug.github.io](https://genaug.github.io)
 
 ![](media/augmented_combined.png)
