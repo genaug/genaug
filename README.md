@@ -1,6 +1,6 @@
 # GenAug
 
-[**GenAug: Retargeting behaviors to unseen situations via Generative Augmentation**](https://arxiv.org/pdf/2109.12098.pdf)  
+[**GenAug: Retargeting behaviors to unseen situations via Generative Augmentation**](https://arxiv.org/abs/2302.06671)  
 [Zoey Chen](https://qiuyuchen14.github.io//), [Sho Kiami](https://www.linkedin.com/in/shokiami), [Abhishek Gupta*](https://abhishekunique.github.io/) [Vikash Kumar*](https://vikashplus.github.io/)  
 [RSS 2023](https://roboticsconference.org/) 
 
