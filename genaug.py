@@ -23,18 +23,10 @@ from copy import deepcopy
 import time
 import logging
 logging.getLogger("pybullet").setLevel(logging.ERROR)
-# from carvekit.api.high import HiInterface
-# from carvekit.api.interface import Interface
-# from carvekit.ml.wrap.fba_matting import FBAMatting
-# from carvekit.ml.wrap.tracer_b7 import TracerUniversalB7
-# from carvekit.pipelines.postprocessing import MattingMethod
-# from carvekit.pipelines.preprocessing import PreprocessingStub
-# from carvekit.trimap.generator import TrimapGenerator
 from PIL import Image
 import torch
 from tqdm.auto import tqdm
-import trimesh
-from utils import get_pc, render_camera, check_inside, reset_scene, create_obj, create_scene, get_obj_names, create_circular_mask, visualize_rgb_pc
+from utils import get_pc, render_camera, reset_scene, create_obj, create_scene, visualize_rgb_pc
 import glob
 import cv2
 import torch
