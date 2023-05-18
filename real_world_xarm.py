@@ -11,15 +11,12 @@ from scipy.spatial.transform import Rotation as Rot
 
 LABELS_DIR = '../labels'
 calib_position = np.array([0.5380988422830156, 0.7284210596582703, 0.46183529911096044])
-tuned_position = calib_position + np.array([0.010, -0.009, 0.018])
 calib_rotation = [0.004902906080955535, 0.9062262913069816, -0.41991621434495513, 0.04899227884224285]
-tuned_rotation = Rot.from_matrix(
-    Rot.from_rotvec([0.026, 0.054, 0.000]).as_matrix() @ Rot.from_quat(calib_rotation).as_matrix()).as_quat()
+
 CAMERA_CONFIG = {
-    'intrinsics': [386.72210693359375, 0.0, 323.0413513183594, 0.0, 386.17559814453125, 242.57159423828125, 0.0, 0.0,
-                   1.0],
-    'position': tuned_position,
-    'rotation': tuned_rotation,
+    'intrinsics': [386.72210693359375, 0.0, 323.0413513183594, 0.0, 386.17559814453125, 242.57159423828125, 0.0, 0.0, 1.0],
+    'position': calib_position,
+    'rotation': calib_rotation,
 }
 XARM_SDK = '../../../xArm-Python-SDK'
 XARM_IP = '192.168.1.220'
@@ -79,8 +76,7 @@ def get_pointcloud(depth, intrinsics):
 def transform_pointcloud(points, transform):
     """Apply rigid transformation to 3D pointcloud."""
     padding = ((0, 0), (0, 0), (0, 1))
-    homogen_points = np.pad(points.copy(), padding,
-                            'constant', constant_values=1)
+    homogen_points = np.pad(points.copy(), padding, 'constant', constant_values=1)
     for i in range(3):
         points[Ellipsis, i] = np.sum(transform[i, :] * homogen_points, axis=-1)
     return points
