@@ -13,13 +13,13 @@ For the latest updates, see: [genaug.github.io](https://genaug.github.io)
 
 ## TODOs: 
 - [ ] push to pip install
-- [X] clean up and push real-world robot code
+- [x] clean up and push real-world robot code
 - [ ] clean up and push sim experiments
 - [ ] (if have time) integrate with SAM and do an interative demo on hugging face
 ## Guides
 
 - Getting Started: [Installation](#installation), [Quick Tutorial](#quickstart)
-- Data Generation: [Dataset](#dataset-generation),
+- Experiments: [Data Generation](#Dataset), [Simulation](#Sim), [Real-world](#real_world)
 - References: [Citations](#citations)
 
 
@@ -41,7 +41,7 @@ We've provided a quickstart to give you a demo of how to apply GenAug on example
 ```bash
 python genaug.py
 ```
-## Real-World Data Collection
+## Real-world
 We provide a quick guidance on how to collect real-world data for pick-and-place tasks using a xarm robot. The color pointcloud is first transformed to a top-down view, a user clicks pick and place locations on the image, and check if the robot can successfully complete the task. If the task is completed, the labels will be saved in the folder path. 
 ```bash
 python real_world_xarm.py
